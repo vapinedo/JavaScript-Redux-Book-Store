@@ -41,11 +41,12 @@ const createCard = (cardData, targetDOM) => {
   const bodyTextEl = document.createElement("p");
   bodyTextEl.className = "card-text";
   bodyTextEl.innerText = description;
+  
 
   bodyEl.appendChild(bodyTitleEl);
   bodyEl.appendChild(bodyTextEl);
+  cardInnerWrapperEl.appendChild(cardImg);
   cardInnerWrapperEl.appendChild(bodyEl);
-  cardWrapperEl.appendChild(cardImg);
   cardWrapperEl.appendChild(cardInnerWrapperEl);
   targetDOM.appendChild(cardWrapperEl);
 };

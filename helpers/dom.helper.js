@@ -20,14 +20,19 @@ export const createCard = (cardData, targetDOM) => {
     body.className = "card-body";
   
   
-    const linkWrapper = document.createElement('div');
-    linkWrapper.className = 'd-grid mt-3';
+    const actionsContainer = document.createElement('div');
+    actionsContainer.className = 'd-flex justify-content-between align-items-center mt-3';
   
     const detailLink = document.createElement('a');
-    detailLink.className = 'btn btn-outline-primary';
+    detailLink.className = 'btn btn-primary btn-sm';
     detailLink.setAttribute('href', seeDetail);
     detailLink.setAttribute('target', '_blank');
     detailLink.innerText = 'See Details';
+
+    const addToCart = document.createElement('button');
+    addToCart.className = 'btn btn-outline-info btn-sm d-flex d-flex justify-content-between align-items-center gap-2';
+    addToCart.setAttribute('title', 'Add to cart');
+    addToCart.innerHTML = "<i class='bx bx-cart-add' style='font-size: 1.2rem'></i> <span>Add to card</span>";
   
     const title = document.createElement("h5");
     title.className = "card-title";
@@ -39,8 +44,9 @@ export const createCard = (cardData, targetDOM) => {
   
     body.appendChild(title);
     body.appendChild(text);
-    linkWrapper.appendChild(detailLink);
-    body.appendChild(linkWrapper);
+    actionsContainer.appendChild(detailLink);
+    actionsContainer.appendChild(addToCart);
+    body.appendChild(actionsContainer);
   
     card.appendChild(img);
     card.appendChild(body);

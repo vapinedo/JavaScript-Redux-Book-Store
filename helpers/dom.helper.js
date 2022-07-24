@@ -7,7 +7,7 @@ export const createCard = (cardData, targetDOM) => {
     const cardDescription = getXCharFromText(cardData.volumeInfo.description, 140);
   
     const container = document.createElement("div");
-    container.className = "col";
+    container.className = "col book-item animate__animated animate__fadeIn";
   
     const card = document.createElement("div");
     card.className = "card";
@@ -39,7 +39,7 @@ export const createCard = (cardData, targetDOM) => {
     title.innerText = cardTitle;
   
     const text = document.createElement("p");
-    text.className = "card-text";
+    text.className = "card-text text-muted";
     text.innerText = cardDescription;  
   
     body.appendChild(title);

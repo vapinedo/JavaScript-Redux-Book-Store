@@ -1,5 +1,5 @@
 body {
-    background-color: #ebebeb;
+    background-color: #e0e0e0;
 }
 
 .navbar-brand {
@@ -15,4 +15,8 @@ body {
 .container {
     padding-top: 100px;
     padding-bottom: 40px;
+}
+
+.book-item {
+    cursor: pointer;
 }

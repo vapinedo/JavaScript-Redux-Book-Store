@@ -7,3 +7,9 @@ export const getBookList = async () => {
   return bookList;
 };
 
+export const getBookById = async (id) => {
+  const url = `https://www.googleapis.com/books/v1/volumes/${id}`;
+  const response = await fetch(url);
+  const book = await response.json();
+  return book;
+};

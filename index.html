@@ -30,10 +30,10 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="./index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Favorites</a>
+            <a class="nav-link" href="./book-detail.html">Favorites</a>
           </li>
         </ul>
 
@@ -45,11 +45,11 @@
     </div>
   </nav>
 
-  <main class="container">
-    <div id="bookCardGrid" class="row row-cols-1 row-cols-md-4 g-3"></div>
-  </main>
+  <div id="root" class="container"></div>
 
+  <script src="./index.js" type="module"></script>
   <script src="./app.js" type="module"></script>
+  <script src="./react.js" type="module"></script>
   <script src="./services/book.service.js" type="module"></script>
   <script src="./helpers/string.helper.js" type="module"></script>
   <script src="./helpers/dom.helper.js" type="module"></script>
